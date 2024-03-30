@@ -1,0 +1,64 @@
+body{
+  background-color: rgb(156, 171, 129);
+}
+
+#canvas_field {
+
+  display: block;
+  margin: 0 auto;
+  border: 10px groove black;
+  background: linear-gradient(rgba(255, 255, 255, 0.248), rgba(255,255,255,.5)), url("bg.png");
+}
+  
+p{
+  margin: 20px 0px;
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: black;
+}
+#score {
+  
+  background-color: beige;
+  font: bold;
+  border: 5px groove green;
+  font-style:inherit;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: rgb(190, 29, 199);
+}
+
+.divCollection{
+  width: 250px;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.btns{
+  position: relative;
+}
+
+
+/*
+
+#pause{
+ 
+  background-color: yellowgreen;
+  height: 50px; 
+  width: 100px;
+  font-size: x-large;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+  
+
+}
+#restartGame{
+  background-color: yellowgreen;
+  height: 50px; 
+  width: 100px;
+  font-size: x-large;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+}
+    <button id="pause" style="display: none;">pause</button>
+      <button id="restartGame" style="display: none;">restart</button>
+*/

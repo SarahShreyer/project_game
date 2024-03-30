@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="main.js"></script>
+    <title>Snake Game</title>
+  </head>
+  <body>
+    <p> SNAKE PIXEL GAME </p>
+    <div class="divCollection">
+      <h1 id="score">0</h1> 
+      <img src="restart.png" id="restartBtn" class="btns">
+      <img src="pause.png" id="pauseBtn" class="btns">
+    </div>
+
+    <canvas id="canvas_field" width="832" height="576" ></canvas>
+    <img src="body.png" id="bodySnake" style="display: none;">
+    <img src="happyHead.png" id="headSnake" style="display: none;">
+    <img src="eatingHead.png" id="eatingSnake" style="display: none;">
+    <img src="food.png" id="food" style="display: none;" >
+    <img src="deadHead.png" id="deadHead" style="display: none;" >
+
+  </body>
+</html>
