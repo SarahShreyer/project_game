@@ -8,10 +8,13 @@ const food = document.getElementById('food');
 const scoreCount = document.getElementById('score');
 const pauseBtn = document.getElementById('pauseBtn');
 const restartGame = document.getElementById('restartBtn');
+const gamePause = document.getElementById('gamePause');
 const fieldHeight = canvasField.height;
 const fieldWidth = canvasField.width;
 const snakeHeight = 64;
 const snakeWidth = 64;
+
+let directionChanged = false
 
 let direction = null;
 const step = 64;
@@ -30,6 +33,11 @@ let score = 0;
 
 pauseBtn.onclick =()=>{
   pause = !pause;
+  if(pause){
+    gamePause.style.display = 'block';
+  }else{
+    gamePause.style.display = 'none';
+  }
   render();
 }
 
@@ -55,24 +63,28 @@ document.body.onkeydown = (ev)=>{
   if(pause) return ;
   switch(ev.keyCode){
     case 37://left
-      if(direction != "right"){
+      if(direction != "right" && !directionChanged){
         direction = "left";
+        directionChanged = true
       }
     break;
     case 38://up
-      if(direction != "down"){
+      if(direction != "down" && !directionChanged){
         direction = "up";
+        directionChanged = true
       }
     break;
     case 39://right
-      if(direction != "left"){
+      if(direction != "left" && !directionChanged){
         direction = "right";
-        }
+        directionChanged = true
+      }
     break;
     case 40://down
-      if(direction != "up"){
+      if(direction != "up" && !directionChanged){
         direction = "down";
-        }
+        directionChanged = true
+      }
     break;
     default:
     break;
@@ -87,6 +99,7 @@ function drawSnake(){
   }
 }
 function render(){
+  directionChanged = false
   if(gameOver){
     ctx.clearRect(0,0,fieldWidth,fieldHeight);
     drawSnake();
